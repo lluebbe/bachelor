@@ -1,0 +1,19 @@
+{
+    "Metrics": [
+        {
+            "requirementId": "OPS-05.3H",
+            "control": "PROTECTION AGAINST MALWARE – IMPLEMENTATION",
+            "metricId": "MalwareProtectionOutput",
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9daedab3-fb2d-461e-b861-71790eead4f6",
+            "description": "This metric states whether automatic notifications are enabled (e.g. e-mail) about malware threats. This relates to EUCS’ definition of “continuous monitoring”.",
+            "timestamp": "2019-10-09T17:48:05Z",
+            "targetValue": false,
+            "targetValueDescription": "NonCompliant",
+            "targetValueDatatype": "Boolean",
+            "intervalH": "1",
+            "targetResourceType": "VirtualMachine",
+            "targetResource": "/subscriptions/fffedd8f-ffff-fffd-fffd-fffed2f84852/resourceGroups/myrg1/providers/Microsoft.Network/publicIPAddresses/mypubip1",
+            "securityFeature": "malwareProtection.applicationLogging.loggingService"
+        }
+    ]
+}
