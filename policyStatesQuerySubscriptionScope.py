@@ -2,6 +2,7 @@ from azure.identity import InteractiveBrowserCredential
 from azure.mgmt.policyinsights import PolicyInsightsClient
 import json
 
+
 def main():
     client = PolicyInsightsClient(
         credential=InteractiveBrowserCredential(),
@@ -12,7 +13,7 @@ def main():
         policy_states_resource="latest",
         subscription_id="<subscription_id>",
     )
-    
+
     data = [item.as_dict() for item in response]
 
     output_json = {
@@ -21,11 +22,11 @@ def main():
         "@odata.count": len(data),
         "value": data
     }
-    output_file="policy_states_results.json"
+    output_file = "policy_states_results.json"
     with open(output_file, "w") as file:
-        json.dump(output_json, file,indent=4)
+        json.dump(output_json, file, indent=4)
     print("Resultdaten wurden erflogreich in", output_file, "gespeichert.")
-  
-   
+
+
 if __name__ == "__main__":
     main()
