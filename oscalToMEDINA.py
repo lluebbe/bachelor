@@ -1,17 +1,20 @@
 import json
 
+
 def read_json_file(file_path):
     with open(file_path, 'r') as file:
         data = json.load(file)
     return data
+
 
 counter = 0
 file_path = "importantResults.json"
 data = read_json_file(file_path)
 
 for index, result in enumerate(data['assessmentResults']):
+    policy = result['importAssessmentPlan']['assessmentPolicy']
     resource = result['assessmentSubject']['resource']
-    if 'virtualmachines' in resource:
+    if 'virtualmachines' in resource and '1f7c564c-0a90-4d44-b7e1-9d456cffaee8' in policy:
         timestamp = data['assessmentResults'][index]['metadata']['timestamp']
         resource_id = data['assessmentResults'][index]['assessmentSubject']['resource']
         policy_definition_id = data['assessmentResults'][index]['importAssessmentPlan']['assessmentPolicy']
