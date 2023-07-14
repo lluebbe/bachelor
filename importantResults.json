@@ -5,10 +5,10 @@
                 "timestamp": "2019-10-09T17:48:05Z"
             },
             "importAssessmentPlan": {
-                "assessmentPolicy": "/providers/Microsoft.Authorization/policyDefinitions/9daedab3-fb2d-461e-b861-71790eead4f6"
+                "assessmentPolicy": "/providers/Microsoft.Authorization/policyDefinitions/1f7c564c-0a90-4d44-b7e1-9d456cffaee8"
             },
             "assessmentSubject": {
-                "resource": "/subscriptions/fffedd8f-ffff-fffd-fffd-fffed2f84852/resourceGroups/myrg1/providers/Microsoft.Network/publicIPAddresses/mypubip1"
+                "resource": "/subscriptions/fffedd8f-ffff-fffd-fffd-fffed2f84852/resourcegroups/myGroup/providers/microsoft.compute/virtualmachines/test-vm"
             },
             "findings": {
                 "isCompliant": false,
@@ -23,7 +23,7 @@
                 "assessmentPolicy": "/providers/Microsoft.Authorization/policyDefinitions/9daedab3-fb2d-461e-b861-71790eead4f6"
             },
             "assessmentSubject": {
-                "resource": "/subscriptions/fffedd8f-ffff-fffd-fffd-fffed2f84852/resourceGroups/myrg1/providers/Microsoft.Network/publicIPAddresses/mypubip1"
+                "resource": "/subscriptions/fffedd8f-ffff-fffd-fffd-fffed2f84852/resourceGroups/myGroup/providers/Microsoft.Network/publicIPAddresses/mypubip1"
             },
             "findings": {
                 "isCompliant": false,
