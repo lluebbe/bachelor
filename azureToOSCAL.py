@@ -1,13 +1,9 @@
 import json
 
-counter = 0
-
-
 def read_json_file(file_path):
     with open(file_path, 'r') as file:
         data = json.load(file)
     return data
-
 
 file_path = "sampleResponse.json"
 
@@ -25,14 +21,12 @@ for item in data['value']:
     policy_definition_id = item['policyDefinitionId']
     is_compliant = item['isCompliant']
     compliance_state = item['complianceState']
-
     timestamps.append(timestamp)
     resource_ids.append(resource_id)
     policy_definition_ids.append(policy_definition_id)
     is_compliant_list.append(is_compliant)
     compliance_states.append(compliance_state)
 
-    counter += 1
 
 assessment_results = []
 
